@@ -10,10 +10,14 @@ Todas as partes do sistema estão até agora hospedadas em servidores Google na 
 
 ### GET /
 Retorna versão estável do sistema e sistuação em terpo real de conexão com o banco de dados.
+
+Formato de retorno:
+```javascript
 {
 "version":"<string>", //versão em produção
 "databse":"<string>" //status de coneção (connected, disconnected, connecting, disconnecting)
 }
+```
 
 ### GET /trajectory
 retorna todos os movimentos registrados no banco.
