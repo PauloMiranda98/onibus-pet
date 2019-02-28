@@ -5,7 +5,14 @@ export default class MovementRepository {
 
     async saveMovement(movement : IMovement) : Promise<IMovement>{
 
-        return await new Movement(movement).save().catch(err => {
+        let m = new Movement(movement);
+
+        let validate = await m.validateSync();
+        if(validate)
+            throw new ErrorCode(400, validate.message);
+
+
+        return await m.save().catch(err => {
             throw new ErrorCode(500, err.message);
         });
 
