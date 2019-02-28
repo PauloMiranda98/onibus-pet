@@ -59,6 +59,7 @@ Formato de envio:
 {
 "lat":"<string>", //latitude
 "lon":"<string>", //longitude
-"time":"<string>" //horario de envio
+"time":"<string>", //horario de envio
+"velocity":"<double>" //velocidade(opcional)
 }
 ```
