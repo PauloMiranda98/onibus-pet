@@ -38,7 +38,9 @@ export default class TrajectoryController {
 
         try {
             let results : IMovement[] = await this.movementRepository.getMovements();
-            if(results)
+            if(!results || results.length == 0 )
+                res.sendStatus(404);
+            else
                 res.send(results);
 
         }catch (e) {
