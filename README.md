@@ -16,7 +16,8 @@ Retorna versão estável do sistema e sistuação em terpo real de conexão com 
 }
 
 ### GET /trajectory
-retorna todos os movimentos registrados no banco
+retorna todos os movimentos registrados no banco.
+
 Formato de retorno:
 ```javascript
 {[
@@ -30,7 +31,8 @@ Formato de retorno:
 > caso não haja nenhum movimento ainda registrado no banco o status de retorno será 404.
 
 ### GET /trajectory/bus/<id_onibus_selecionado>
-retorna todos movimentos respectivos ao onibus passado como parâmetro
+retorna todos movimentos respectivos ao onibus passado como parâmetro.
+
 Formato de retorno:
 ```javascript
 {
@@ -47,6 +49,7 @@ Formato de retorno:
 
 ### POST /trajectory/<id_onibus_responsavel>
 armazena em banco o dado de movimento referente ao ônibus passado como parâmetro.
+
 Formato de envio:
 ```javascript
 {
