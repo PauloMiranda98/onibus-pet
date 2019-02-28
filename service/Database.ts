@@ -7,7 +7,7 @@ export default class Database {
 
 
     public static getDBStatus() : string{
-        let code = Database.db.readyState;
+        let code = Database.db ? Database.db.readyState : 0;
         let status : string;
         switch (code) {
             case 0:{

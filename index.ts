@@ -11,7 +11,3 @@ db.connect().catch(err=>{
 });
 
 new Server().initServer([log, trajectory]);
-
-process.on('SIGINT', async () => {
-    await db.disconnect();
-});
