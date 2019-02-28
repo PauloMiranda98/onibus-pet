@@ -63,3 +63,5 @@ Formato de envio:
 "velocity":"<double>" //velocidade(opcional)
 }
 ```
+> resposta 200 para inserção realizada com sucesso, resposta 400 para requisições de formato inválido.
+
